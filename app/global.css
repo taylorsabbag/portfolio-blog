@@ -5,6 +5,7 @@
   color: #fefefe;
 }
 
+
 :root {
   --sh-class: #2d5e9d;
   --sh-identifier: #354150;
@@ -15,6 +16,57 @@
   --sh-jsxliterals: #6266d1;
   --sh-property: #e25a1c;
   --sh-entity: #e25a1c;
+  
+  /* --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+  --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+  --step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+  --step-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+  --step-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+  --step-3: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
+  --step-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
+  --step-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem); */
+}
+
+@theme {
+  /* --font-size-xs: var(--step--2);
+  --font-size-sm: var(--step--1);
+  --font-size-base: var(--step-0);
+  --font-size-lg: var(--step-1);
+  --font-size-xl: var(--step-2);
+  --font-size-2xl: var(--step-3);
+  --font-size-3xl: var(--step-4);
+  --font-size-4xl: var(--step-5); */
+
+  --color-foreground: oklch(20% 50% 275deg);
+  --color-background: oklch(98% 0% 0deg);
+
+  --color-muted: oklch(90% 0% 0deg);
+  --color-muted-foreground: oklch(70% 0% 0deg);
+
+  --color-accent: oklch(20% 50% 275deg);
+  --color-accent-foreground: oklch(98% 0% 0deg);
+
+  --color-popover: oklch(98% 0% 0deg);
+  --color-popover-foreground: oklch(20% 50% 275deg);
+
+  --color-card: oklch(98% 0% 0deg);
+  --color-card-foreground: oklch(20% 50% 275deg);
+  
+  --color-primary: oklch(20% 50% 275deg);
+  --color-primary-foreground: oklch(98% 0% 0deg);
+  
+  --color-secondary: oklch(98% 0% 0deg);
+  --color-secondary-foreground: oklch(20% 50% 275deg);
+  
+  --color-destructive: oklch(98% 0% 0deg);
+  --color-destructive-foreground: oklch(20% 50% 275deg);
+  
+  --color-border: oklch(20% 50% 275deg);
+  --color-input: oklch(20% 50% 275deg);
+  --color-ring: oklch(20% 50% 275deg);
+  --color-chart-1: oklch(20% 50% 275deg);
+  --color-chart-2: oklch(98% 0% 0deg);
+  --color-chart-3: oklch(20% 50% 275deg);
 }
 
 @media (prefers-color-scheme: dark) {
