@@ -37,8 +37,17 @@
   --font-size-3xl: var(--step-4);
   --font-size-4xl: var(--step-5); */
 
-  --color-foreground: oklch(20% 50% 275deg);
-  --color-background: oklch(98% 0% 0deg);
+  --color-foreground: oklch(40% 0.1357 285);
+  --color-background: oklch(99% 0% 0deg);
+
+  --color-primary: oklch(20% 50% 275deg);
+  --color-primary-foreground: oklch(98% 0% 0deg);
+  
+  --color-secondary: oklch(98% 0% 0deg);
+  --color-secondary-foreground: oklch(20% 50% 275deg);
+
+  --color-card: oklch(98% 0% 0deg);
+  --color-card-foreground: oklch(20% 50% 275deg);
 
   --color-muted: oklch(90% 0% 0deg);
   --color-muted-foreground: oklch(70% 0% 0deg);
@@ -48,15 +57,6 @@
 
   --color-popover: oklch(98% 0% 0deg);
   --color-popover-foreground: oklch(20% 50% 275deg);
-
-  --color-card: oklch(98% 0% 0deg);
-  --color-card-foreground: oklch(20% 50% 275deg);
-  
-  --color-primary: oklch(20% 50% 275deg);
-  --color-primary-foreground: oklch(98% 0% 0deg);
-  
-  --color-secondary: oklch(98% 0% 0deg);
-  --color-secondary-foreground: oklch(20% 50% 275deg);
   
   --color-destructive: oklch(98% 0% 0deg);
   --color-destructive-foreground: oklch(20% 50% 275deg);
@@ -67,6 +67,15 @@
   --color-chart-1: oklch(20% 50% 275deg);
   --color-chart-2: oklch(98% 0% 0deg);
   --color-chart-3: oklch(20% 50% 275deg);
+
+  --radius-sm: 0.25rem;
+  --radius: 0.5rem;
+  --radius-lg: 1rem;
+
+}
+
+@theme dark {
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -83,6 +92,14 @@
 
 html {
   min-width: 360px;
+  @apply bg-background text-foreground;
+}
+
+body {
+  @apply bg-background text-foreground;
+  font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
 }
 
 .prose .anchor {
@@ -199,4 +216,16 @@ table {
 
 .title {
   text-wrap: balance;
+}
+
+nav a {
+  @apply transition-all hover:bg-foreground hover:text-background dark:hover:text-neutral-200;
+
+  &:hover {
+    @apply bg-foreground text-background dark:text-neutral-200;
+  }
+
+  &.active {
+    @apply bg-foreground text-background dark:text-neutral-200;
+  }
 }
