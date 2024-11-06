@@ -58,7 +58,7 @@ export function PortfolioProjects() {
 					</CardHeader>
 					<CardContent className="backdrop-blur bg-white/50 flex-1 group-hover:backdrop-blur-[0] group-hover:bg-transparent transition-all duration-300" />
 					<CardFooter className="border-t border-foreground/50 flex align-start justify-between backdrop-blur bg-white/50 rounded-b-lg py-6">
-						<div className="flex flex-wrap gap-2 px-4">
+						<div className="flex flex-wrap gap-2 px-4 max-[460px]:hidden">
 							{project.tags.map((tag) => (
 								<Badge
 									key={tag}
@@ -68,7 +68,7 @@ export function PortfolioProjects() {
 								</Badge>
 							))}
 						</div>
-						<Button className="self-end" asChild>
+						<Button className="self-end max-[460px]:w-full" asChild>
 							<Link href={project.live}>View Project</Link>
 						</Button>
 					</CardFooter>
