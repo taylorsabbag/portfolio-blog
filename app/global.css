@@ -117,7 +117,11 @@ body {
 }
 
 .prose a {
-  @apply underline transition-all decoration-neutral-400 dark:decoration-neutral-600 underline-offset-2 decoration-[0.1em];
+  @apply underline transition-all decoration-purple-600 dark:decoration-purple-400 underline-offset-2 decoration-[0.1em];
+
+  &:hover {
+    @apply decoration-transparent dark:decoration-purple-200;
+  }
 }
 
 .prose .anchor:after {
@@ -130,7 +134,7 @@ body {
 }
 
 .prose pre {
-  @apply bg-neutral-50 dark:bg-neutral-900 rounded-lg overflow-x-auto border border-neutral-200 dark:border-neutral-900 py-2 px-3 text-sm;
+  @apply bg-neutral-50 dark:bg-neutral-900 rounded-lg overflow-x-auto border border-neutral-200 dark:border-neutral-900 py-2 px-3 text-sm leading-3;
 }
 
 .prose code {
@@ -138,9 +142,8 @@ body {
 }
 
 .prose pre code {
-  @apply p-0;
+  @apply p-0 leading-3;
   border: initial;
-  line-height: 1.5;
 }
 
 .prose code span {
@@ -222,10 +225,10 @@ nav a {
   @apply transition-all hover:bg-foreground hover:text-background dark:hover:text-neutral-200;
 
   &:hover {
-    @apply bg-foreground text-background dark:text-neutral-200;
+    @apply bg-foreground text-background dark:text-neutral-200 rounded-sm;
   }
 
   &.active {
-    @apply bg-foreground text-background dark:text-neutral-200;
+    @apply bg-foreground text-background dark:text-neutral-200 rounded-sm;
   }
 }

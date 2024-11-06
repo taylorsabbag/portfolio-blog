@@ -28,16 +28,14 @@ As a game, it's silly fun and a good icebreaker to break out at a social gatheri
 
 However, the much more interesting version is FizzBuzz, the interview question. As an interview question (mostly for junior developers), FizzBuzz is an elegant way of prodding at a developer's approach to solving simple problems in an efficient way. Because we're now exploring FizzBuzz as a coding problem, though, what might this look like in pseudocode? First, let's lay down some ground rules. You will be provided with a single parameter *n*, the number to count up to starting from 1, and you must provide an array where each entry is a string with either a number or the appropriate word response.
 
-```js
-// Declare fizzBuzz function with n as its parameter.
-// Declare an empty array to hold our results.
-// Loop from 1 to n and for each number:
- // If the number is divisible by 3, add 'Fizz' to the array.
- // Else if the number is divisible by 5, add 'Buzz' to the array.
- // Else if the number is divisible by 3 and 5, add 'FizzBuzz to the array'.
- // Else, add the current number, as a string, to the array.
-// Return the resulting array.
-```
+- Declare fizzBuzz function with n as its parameter.
+- Declare an empty array to hold our results.
+- Loop from 1 to n and for each number:
+  - If the number is divisible by 3, add 'Fizz' to the array.
+  - Else if the number is divisible by 5, add 'Buzz' to the array.
+  - Else if the number is divisible by 3 and 5, add 'FizzBuzz to the array'.
+  - Else, add the current number, as a string, to the array.
+- Return the resulting array.
 
 The first thing you'd need to find out, if you haven't already, is what it means for the number to be divisible. In this case, it means that the remainder of the division of a number and another number is 0. Luckily, we have a handy operator for figuring that out: the Modulo (%) operator. So if this is true, `currentNumber % fizzBuzzNumber === 0` , then we have found an even divisible of a given fizzBuzzNumber. With that and the pseudocode in mind, the simplest answer is really straightforward:
 

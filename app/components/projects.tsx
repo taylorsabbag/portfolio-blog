@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Link from "next/link";
 
 import {
 	Card,
@@ -9,6 +9,7 @@ import {
 	CardContent,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 import linguafrankly from "@/assets/images/linguafrankly.webp";
 import personalwebsite from "@/assets/images/personalwebsite.webp";
@@ -48,17 +49,28 @@ export function PortfolioProjects() {
 			{PROJECTS.map((project) => (
 				<Card
 					key={project.title}
-					className="bg-cover bg-center min-h-[500px] flex flex-col justify-between hover:scale-102 transition-all duration-300"
+					className="group bg-cover bg-center min-h-[500px] flex flex-col justify-between hover:scale-102 transition-all duration-300"
 					style={{ backgroundImage: `url(${project.image.src})` }}
 				>
-					<CardHeader className="backdrop-blur bg-white/50 rounded-t-lg">
+					<CardHeader className="border-b border-foreground/50 backdrop-blur bg-white/50 rounded-t-lg">
 						<CardDescription>{project.description}</CardDescription>
 						<CardTitle>{project.title}</CardTitle>
 					</CardHeader>
-					<CardContent>
-					</CardContent>
-					<CardFooter className="flex justify-end backdrop-blur bg-white/50 rounded-b-lg py-6">
-						<Button>View Project</Button>
+					<CardContent className="backdrop-blur bg-white/50 flex-1 group-hover:backdrop-blur-[0] group-hover:bg-transparent transition-all duration-300" />
+					<CardFooter className="border-t border-foreground/50 flex align-start justify-between backdrop-blur bg-white/50 rounded-b-lg py-6">
+						<div className="flex flex-wrap gap-2 px-4">
+							{project.tags.map((tag) => (
+								<Badge
+									key={tag}
+									className=""
+								>
+									{tag}
+								</Badge>
+							))}
+						</div>
+						<Button className="self-end" asChild>
+							<Link href={project.live}>View Project</Link>
+						</Button>
 					</CardFooter>
 				</Card>
 			))}

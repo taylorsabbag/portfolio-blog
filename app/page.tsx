@@ -4,7 +4,7 @@ export default function Page() {
 	return (
 		<section>
 			<h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-				Taylor Sabbag
+				Things About Me (Taylor Sabbag)
 			</h1>
 			<article className="prose">
 				<CustomMDX
